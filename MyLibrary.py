@@ -1,5 +1,5 @@
 def repeatText(number : float, text : str):
-    """ returns a string <text> repeated <number> times"""
+    """ returns a string repeated number times"""
     return int(number) * text
 
 def countLetters(text : str):
@@ -11,14 +11,14 @@ class PhoneBook():
     def __init__(self):
         self.contacts = set()
         self.hash = set()
-        
+
     def add(self, name : str, number : str):
         contact = Contact(name, number)
         if contact.uniqueID not in self.hash:
             self.contacts.add(contact)
             self.hash.add(contact.uniqueID)
 
-    def ring(self, name):
+    def ring(self, name : str):
         for contact in self.contacts:
             if contact.name == name:
                 print(f'{contact.name}..Ring ring..')
