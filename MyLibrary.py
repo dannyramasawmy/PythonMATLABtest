@@ -10,7 +10,7 @@ def countLetters(text : str):
 class PhoneBook():
     def __init__(self):
         self.contacts = set()
-        self.hash = set()
+        self.hash = set() # check contact is unique
 
     def add(self, name : str, number : str):
         contact = Contact(name, number)
@@ -43,6 +43,18 @@ class Contact():
     def uniqueID(self):
         return self.__hash__()
 
+def fib(n):
+    if n < 3:
+        return 1
+    
+    a = 1
+    b = 1
+    
+    for i in range(3, n+1):
+        c = a + b
+        b, a = c, b 
+    
+    return c 
 
 
 if __name__ == "__main__":
@@ -63,3 +75,12 @@ if __name__ == "__main__":
     print(myPB)    
     myPB.ring('Jo')
 
+    assert fib(1) == 1
+    assert fib(2) == 1
+    assert fib(3) == 2
+    assert fib(4) == 3
+    assert fib(5) == 5
+    assert fib(6) == 8
+    
+    
+    

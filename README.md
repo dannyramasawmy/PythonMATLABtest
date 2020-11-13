@@ -1,2 +1,2 @@
 # Python - MATLAB test
-Test importing python libraries and using them in matlab.
+Test script for importing python libraries in MATLAB and using Python types and classes.
